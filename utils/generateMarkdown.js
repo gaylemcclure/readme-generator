@@ -59,7 +59,7 @@ function generateMarkdown(data) {
   <li><a href="#installation">Installation</a></li>
   <li><a href="#usage">Usage</a></li>
   <li><a href="#licence">Licence</a> </li>
-  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#contributions">Contributions</a></li>
   <li><a href="#tests">Tests</a></li>
   <li><a href="#questions">Questions</a></li>
   </ol>
@@ -73,7 +73,7 @@ function generateMarkdown(data) {
   ## LICENCE
   ${textSection}
   
-  ## CONTRIBUTING
+  ## CONTRIBUTIONS
   ${data.contribution}
   
   ## TESTS

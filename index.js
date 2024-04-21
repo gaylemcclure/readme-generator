@@ -85,6 +85,7 @@ function init() {
   .prompt(questions)
   .then((answers) => {
     writeToFile('./README-Eg.md', answers)
+    console.log('Please check the README-Eg.md file to see your results. ')
   })
   .catch((error) => {
     if (error.isTtyError) {
