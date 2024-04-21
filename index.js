@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
-const markdown = require("./utils/generateMarkdown")
+// Packages needed for this application
+const generateMarkdown = require("./utils/generateMarkdown")
 let inquirer = require('inquirer');
+const fs = require('node:fs');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
   {
     type: 'input',
@@ -37,7 +38,18 @@ const questions = [
   {
     type: 'list',
     name: 'licence',
-    message: "What licence would you like to use?"
+    message: "What licence would you like to use?",
+    choices: [
+      'Apache Licence 2.0',
+      'GNU General Public Licence v3.0',
+      'MIT Licence',
+      'BSD 2-Clause "Simplified" Licence',
+      'Boost Software Licence 1.0',
+      'Creative Commons Zero v1.0',
+      'Eclipse Public Licence 2.0',
+      'Mozilla Public Licence 2.0',
+      'The Unlicence'
+    ]
   },
   {
     type: 'input',
@@ -51,58 +63,38 @@ const questions = [
     message: "What is your email address?"
   },
   
-  
-  
-  
-  
-  
-  
-  
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Function to write README file
+function writeToFile(fileName, data) {
 
-// TODO: Create a function to initialize app
+  //Call the generate markdown function from utils/generateMarkdown
+  const readmeData = generateMarkdown(data);
+
+  //Write the data to the README-Eg file. 
+  fs.writeFile(fileName, readmeData, 'utf8', (err) => {
+    if (err) throw err;
+  });
+
+}
+
+// Function to initialise the app
 function init() {
 
   inquirer
   .prompt(questions)
   .then((answers) => {
-    // Use user feedback for... whatever!!
+    writeToFile('./README-Eg.md', answers)
   })
   .catch((error) => {
     if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
+      console.error("There was an error. Please try again")
     } else {
-      // Something else went wrong
+      console.log("An unknown error has occured.")
     }
   });
 }
 
 // Function call to initialize app
 init();
-
-
-
-
-
-
-
-  //Sections - Title, Licence, Description, Installation, Usage, COntributing, Tests, Questions
-
-  //Input------
-    //Title of project - Title Section
-    //Description
-    //Installation Instructions
-    //Usage Information
-    //Contribution guidelines
-    //Test instructions
-    //Github username - questions section
-    //Email address - questions section
-
-
-  //List
-    //Licence options - uses licence function - Licence section
-
 
