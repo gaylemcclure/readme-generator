@@ -1,8 +1,9 @@
-# yess
-  [![License](https://img.shields.io/badge/License-Unlicense-blue.svg)](http://unlicense.org/)
+# Come on Eileen
+
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   
   ## DESCRIPTION
-  yess
+  Come on Eileen
   
   ## TABLE OF CONTENTS
   
@@ -17,21 +18,21 @@
   </ol>
   
   ## INSTALLATION
-  yess
+  Come on Eileen
   
   ## USAGE
-  yess
+  Come on Eileen
   
   ## LICENCE
-  Distributed under the undefined.
+  Distributed under the Apache license 2.0. For more information, see <a href=https://opensource.org/licenses/Apache-2.0>here</a>
   
   ## CONTRIBUTING
-  yess
+  Come on Eileen
   
   ## TESTS
-  yess
+  Come on Eileen
   
   ## QUESTIONS
-  Github Username: <a href='https://github.com/yess'>yess</a>  
-  Feel free to email me at yess for further questions. 
+  Github Username: <a href='https://github.com/Come on Eileen'>Come on Eileen</a>  
+  Feel free to email me at Come on Eileen for further questions. 
   

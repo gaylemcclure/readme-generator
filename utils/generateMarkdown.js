@@ -1,4 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+const licenseData = require("./licenseData");
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license) {
@@ -9,66 +10,24 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  //Creating an array to find the correct link
-  const licenseLinkData = [
-    {
-      value: "Apache_2.0",
-      link: "https://opensource.org/licenses/Apache-2.0",
-    },
-    {
-      value: "GPLv3",
-      link: "https://www.gnu.org/licenses/gpl-3.0",
-    },
-    {
-      value: "IPL_1.0",
-      link: "https://opensource.org/licenses/IPL-1.0",
-    },
-    {
-      value: "MIT",
-      link: "https://opensource.org/licenses/MIT",
-    },
-    {
-      value: "BSD_2--Clause",
-      link: "https://opensource.org/license/bsd-2-clause",
-    },
-    {
-      value: "CC0_1.0",
-      link: "http://creativecommons.org/publicdomain/zero/1.0/",
-    },
-    {
-      value: "EPL_1.0",
-      link: "https://opensource.org/licenses/EPL-1.0",
-    },
-    {
-      value: "MPL_2.0",
-      link: "https://opensource.org/licenses/MPL-2.0",
-    },
-    {
-      value: "Unlicense",
-      link: "http://unlicense.org/",
-    },
-  ];
-
   if (license) {
-    let text = "";
-    licenseLinkData.map((link) => {
-      if (link.value === license) {
-        text = `(${link.link})`;
-      }
-    });
-    return text;
+    const link = `(${license})`
+    return link;
   } else {
     return "";
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(license, link) {
   if (license) {
+    const text = `Distributed under the ${license}. For more information, see <a href=${link}>here</a>`;
+    console.log(text)
+    return text;
   } else {
     return "";
   }
@@ -76,11 +35,18 @@ function renderLicenseSection(license) {
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
-  const text = renderLicenseBadge(data.license);
-  const link = renderLicenseLink(data.license);
+
+  //Filter the license data to call the correct info for each function
+  const newLicense = licenseData.filter((license) => license.value === data.license);
+
+  //Call the functions to create the correct data
+  const text = renderLicenseBadge(newLicense[0].value);
+  const link = renderLicenseLink(newLicense[0].link);
+  const textSection = renderLicenseSection(newLicense[0].name, newLicense[0].link)
   const shield = text + link;
-  console.log(shield);
+
   return `# ${data.title}
+
   ${shield}
   
   ## DESCRIPTION
@@ -105,7 +71,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## LICENCE
-  Distributed under the ${data.licence}.
+  ${textSection}
   
   ## CONTRIBUTING
   ${data.contribution}

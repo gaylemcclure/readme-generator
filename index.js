@@ -1,7 +1,16 @@
 // Packages needed for this application
-const generateMarkdown = require("./utils/generateMarkdown")
-let inquirer = require('inquirer');
+const inquirer = require('inquirer');
 const fs = require('node:fs');
+const generateMarkdown = require("./utils/generateMarkdown");
+const licenseLinkData = require('./utils/licenseData');
+
+//Create a choices array from license data file
+let choices = [];
+//Loop through each license object and create a choice with a name and value
+licenseLinkData.forEach((license) => {
+  let licObj = {name: license.name, value: license.value}
+  choices.push(licObj)
+});
 
 // Array of questions for user input
 const questions = [
@@ -39,54 +48,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: "What license would you like to use?",
-    choices: [
-      {
-        key: "AP",
-        name:'Apache license 2.0',
-        value: 'Apache_2.0'
-      },
-      {
-        key: "GP",
-        name:'GNU General Public license v3.0',
-        value: 'GPLv3'
-      },
-      {
-        key: 'IBM',
-        name: "IBM Public License Version 1.0",
-        value: 'IPL_1.0'
-      },
-      {
-        key: "MIT",
-        name:'MIT license',
-        value: 'MIT'
-      },
-      {
-        key: "BSD",
-        name:'BSD 2-Clause "Simplified" license',
-        value: 'BSD_2--Clause'
-      },
-      {
-        key: "CCO",
-        name:'Creative Commons Zero v1.0',
-        value: 'CC0_1.0'
-      },
-      {
-        key: "EPL",
-        name:'Eclipse Public license 2.0',
-        value: 'EPL_1.0'
-      },
-      {
-        key: "MOZ",
-        name:'Mozilla Public license 2.0',
-        value: 'MPL_2.0'
-      },
-      {
-        key: "UL",
-        name:'The Unlicense',
-        value: 'Unlicense'
-      },
-
-    ]
+    choices: choices,
   },
   {
     type: 'input',
@@ -107,7 +69,7 @@ function writeToFile(fileName, data) {
 
   //Call the generate markdown function from utils/generateMarkdown
   const readmeData = generateMarkdown(data);
-  console.log(data.license)
+
 
   //Write the data to the README-Eg file. 
   fs.writeFile(fileName, readmeData, 'utf8', (err) => {
