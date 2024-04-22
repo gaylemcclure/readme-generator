@@ -26,7 +26,6 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license, link) {
   if (license) {
     const text = `Distributed under the ${license}. For more information, see <a href=${link}>here</a>`;
-    console.log(text)
     return text;
   } else {
     return "";

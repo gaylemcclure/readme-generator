@@ -33,7 +33,7 @@ To clone from Github, use GitBash
   ## LICENCE
   Distributed under the MIT license. For more information, see <a href=https://opensource.org/licenses/MIT>here</a>
   
-  ## CONTEIBUTIONS
+  ## CONTRIBUTIONS
   Created by Gayle McClure   
   Uses JavaScript & node.js
   

@@ -1,9 +1,9 @@
-# Come on Eileen
+# Readme Generator
 
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   
   ## DESCRIPTION
-  Come on Eileen
+  THis project will create a professional readme document in minutes
   
   ## TABLE OF CONTENTS
   
@@ -12,27 +12,27 @@
   <li><a href="#installation">Installation</a></li>
   <li><a href="#usage">Usage</a></li>
   <li><a href="#licence">Licence</a> </li>
-  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#contributions">Contributions</a></li>
   <li><a href="#tests">Tests</a></li>
   <li><a href="#questions">Questions</a></li>
   </ol>
   
   ## INSTALLATION
-  Come on Eileen
+  To install, clone fron github
   
   ## USAGE
-  Come on Eileen
+  To use, type 'node index.js' into the terminal and answer the question prompts
   
   ## LICENCE
-  Distributed under the Apache license 2.0. For more information, see <a href=https://opensource.org/licenses/Apache-2.0>here</a>
+  Distributed under the MIT license. For more information, see <a href=https://opensource.org/licenses/MIT>here</a>
   
-  ## CONTRIBUTING
-  Come on Eileen
+  ## CONTRIBUTIONS
+  Created by Gayle McClure
   
   ## TESTS
-  Come on Eileen
+  Clone the project, run it, check the file
   
   ## QUESTIONS
-  Github Username: <a href='https://github.com/Come on Eileen'>Come on Eileen</a>  
-  Feel free to email me at Come on Eileen for further questions. 
+  Github Username: <a href='https://github.com/gaylemcclure'>gaylemcclure</a>  
+  Feel free to email me at gaylekdennison@gmail.com for further questions. 
   
