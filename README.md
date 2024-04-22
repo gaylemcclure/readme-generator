@@ -6,7 +6,10 @@
 This README generator takes user inputs from the command line, and uses them to create an organised and professional README file, complete with license shield. Answer the command prompts to enter the details of your project and the generator will do the hard work for you. 
 
 
-![screenshot](/media/command.png)
+https://github.com/gaylemcclure/readme-generator/assets/10378132/139acd72-6329-4319-b07a-9fa1afc33b64
+
+
+![screenshot](/images/command.png)
 
   ## TABLE OF CONTENTS
   
