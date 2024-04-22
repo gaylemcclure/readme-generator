@@ -9,7 +9,7 @@ This README generator takes user inputs from the command line, and uses them to 
 https://github.com/gaylemcclure/readme-generator/assets/10378132/139acd72-6329-4319-b07a-9fa1afc33b64
 
 
-![screenshot](/images/command.png)
+![screenshot](/media/command.png)
 
   ## TABLE OF CONTENTS
   
