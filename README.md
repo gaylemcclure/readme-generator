@@ -5,7 +5,8 @@
   ## DESCRIPTION
 This README generator takes user inputs from the command line, and uses them to create an organised and professional README file, complete with license shield. Answer the command prompts to enter the details of your project and the generator will do the hard work for you. 
 
-![plot](/images/command.png)
+
+![screenshot](/media/command.png)
 
   ## TABLE OF CONTENTS
   
